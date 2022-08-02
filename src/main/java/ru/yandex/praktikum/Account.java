@@ -9,6 +9,15 @@ public class Account {
     }
 
     public boolean checkNameToEmboss() {
+        if(name.length()>=3 && name.length()<=19 ){
+            System.out.println("Больше 3 и меньше 20");
+            for (int i = 0; i < name.length(); i++) {
+                if (Character.isWhitespace(name.charAt(i))) {
+                    System.out.println("Содержит 1 пробел");
+                }
+                    return true;
+                }
+        }
         return false;
         /*
              Этот метод должен проверять, что сохранённая через конструктор строка соответствует требованиям.
