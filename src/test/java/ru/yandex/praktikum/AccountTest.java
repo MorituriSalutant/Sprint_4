@@ -4,7 +4,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
 public class AccountTest {
@@ -12,13 +12,13 @@ public class AccountTest {
     private final String name;
     private final boolean expectBoolean;
 
-    public AccountTest(String name, boolean expectBoolean){
+    public AccountTest(String name, boolean expectBoolean) {
         this.name = name;
         this.expectBoolean = expectBoolean;
     }
 
     @Parameterized.Parameters
-    public static Object[][] getData(){
+    public static Object[][] getData() {
         return new Object[][]{
                 {"Ша", false},
                 {"ШаловейГригорийШаловейГригорий", false},
