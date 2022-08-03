@@ -10,23 +10,18 @@ public class Account {
 
     public boolean checkNameToEmboss() {
         if(name.length()>=3 && name.length()<=19 ){
-            System.out.println("Больше 3 и меньше 20");
-            for (int i = 0; i < name.length(); i++) {
-                if (Character.isWhitespace(name.charAt(i))) {
-                    System.out.println("Содержит 1 пробел");
-                }
-                    return true;
-                }
+            System.out.println("в строке не меньше 3 и не больше 19 символов");
+            return true;
+        }
+        if (name.startsWith(" ") || name.endsWith(" ")) {
+            System.out.println("пробел стоит не в начале и не в конце строки.");
+            return true;
+        }
+        if(name.indexOf(' ') == name.lastIndexOf(' ') && name.contains(" ")){
+            System.out.println("в строке есть только один пробел");
+            return true;
         }
         return false;
-        /*
-             Этот метод должен проверять, что сохранённая через конструктор строка соответствует требованиям.
-             Если строка удовлетворяет условиям, метод возвращает true, иначе — false.
-                Её получится напечатать, если соблюдены требования:
-                - в строке не меньше 3 и не больше 19 символов,
-                — в строке есть только один пробел,
-                — пробел стоит не в начале и не в конце строки.
-         */
     }
 
 }
