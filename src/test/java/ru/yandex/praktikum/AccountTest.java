@@ -1,11 +1,14 @@
 package ru.yandex.praktikum;
 
+import io.qameta.allure.Feature;
+import io.qameta.allure.junit4.DisplayName;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 
 import static org.junit.Assert.assertEquals;
 
+@Feature("Проверка метода")
 @RunWith(Parameterized.class)
 public class AccountTest {
 
@@ -32,7 +35,8 @@ public class AccountTest {
     }
 
     @Test
-    public void checkNameToEmbossTrueTest() {
+    @DisplayName("Проверка метода на валидность имени")
+    public void checkNameToEmbossTest() {
         Account account = new Account(name);
 
         boolean actualBoolean = account.checkNameToEmboss();
