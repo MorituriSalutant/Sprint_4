@@ -1,11 +1,12 @@
 package ru.yandex.praktikum;
 
+import org.junit.Assert;
 import org.junit.Test;
 
-
-class PraktikumTest {
+public class PraktikumTest {
 
     @Test
-    void main() {
+    public void hiTest(){
+        Assert.assertTrue(true);
     }
 }
